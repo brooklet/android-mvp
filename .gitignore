@@ -1,2 +1,5 @@
 .gradle/
 .idea/
+local.properties
+android-mvp.iml
+library/library.iml
