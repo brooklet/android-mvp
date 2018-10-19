@@ -7,6 +7,7 @@ import com.brook.common.ILifecycle;
 import com.brook.common.view.MvpView;
 import com.trello.lifecycle2.android.lifecycle.AndroidLifecycle;
 import com.trello.rxlifecycle2.LifecycleProvider;
+import com.trello.rxlifecycle2.LifecycleTransformer;
 import io.reactivex.Observable;
 import org.jetbrains.annotations.NotNull;
 
@@ -44,5 +45,9 @@ public abstract class LifecycleBasePresenter<V extends MvpView> extends BasePres
 
     protected Observable composeLifecycle(Observable ob) {
         return ob.compose(provider.bindToLifecycle());
+    }
+
+    protected LifecycleTransformer lifecycleTransformer() {
+        return provider.bindToLifecycle();
     }
 }
