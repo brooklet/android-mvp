@@ -1,14 +1,10 @@
 package com.brook.common.manager;
 
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class RetrofitServiceManager {
@@ -26,9 +22,8 @@ public class RetrofitServiceManager {
 
         // 添加公共参数拦截器
         HttpCommonInterceptor commonInterceptor = new HttpCommonInterceptor.Builder()
-                .addHeaderParams("Accept-Encoding", "gzip")
-                .addHeaderParams("Accept", "application/json")
-                .addHeaderParams("Content-Type", "application/json; charset=utf-8")
+                .addHeaderParams("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36")
+                .addHeaderParams("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8")
                 .build();
         builder.addInterceptor(commonInterceptor);
 

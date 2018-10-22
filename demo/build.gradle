@@ -42,6 +42,11 @@ dependencies {
     // If you want to use Android Lifecycle for providers
     implementation 'com.trello.rxlifecycle2:rxlifecycle-android-lifecycle:2.2.2'
 
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
